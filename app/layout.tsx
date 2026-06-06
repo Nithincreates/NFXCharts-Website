@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "NFXCharts | Intraday Futures Education",
-  description: "Precision intraday futures education focused on US indices and Gold futures. Institutional-grade framework for intraday trading.",
+  description: "Modern intraday futures education for US indices and Gold futures with structured bias, defined risk, and session-based review.",
 };
 
 export default function RootLayout({
@@ -27,9 +16,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         {children}
       </body>
     </html>

@@ -1,73 +1,121 @@
-'use client';
-
-import Image from 'next/image';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
-    <footer className="bg-zinc-950 border-t border-gray-800 py-16 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Brand */}
-          <div className="flex items-center gap-3">
-            <div>
-              <h3 className="text-lg font-light tracking-tight mb-1 text-white">
-                NFXCharts
-              </h3>
-              <p className="text-sm text-gray-500 font-light leading-relaxed">
-                Precision intraday futures education for institutional traders.
-              </p>
+    <footer className="border-t border-white/10 bg-[#07090d] px-6 py-12">
+      <div className="mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.4fr_0.7fr_1fr]">
+          <div>
+            <div className="mb-4">
+              <Logo />
             </div>
+            <p className="max-w-sm text-sm leading-6 text-gray-500">
+              Precision intraday futures education for traders who want structure before execution.
+            </p>
           </div>
 
-          {/* Links */}
           <div>
-            <ul className="space-y-2">
+            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gray-500">
+              Legal
+            </h4>
+            <ul className="space-y-3">
               <li>
-                <a href="/terms" className="text-sm text-gray-500 hover:text-blue-400 transition-colors font-light">
+                <a href="/terms" className="text-sm text-gray-400 transition-colors hover:text-white">
                   Terms & Conditions
                 </a>
               </li>
               <li>
-                <a href="/refund-policy" className="text-sm text-gray-500 hover:text-blue-400 transition-colors font-light">
+                <a href="/refund-policy" className="text-sm text-gray-400 transition-colors hover:text-white">
                   Refund Policy
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Resources */}
           <div>
-            <h4 className="text-sm font-semibold tracking-tight mb-4 text-gray-400 uppercase">
+            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-gray-500">
               Contact
             </h4>
-            <div className="space-y-4">
-              <div className="p-4 border border-gray-700 hover:border-blue-400/50 transition-all duration-300 bg-zinc-900/50 hover:bg-zinc-900">
-                <p className="text-xs text-gray-500 font-light uppercase tracking-wide mb-2">Email</p>
-                <a 
-                  href="mailto:info@nfxcharts.in" 
-                  className="text-sm text-blue-400 hover:text-blue-300 transition-colors font-light block break-all hover:underline"
+            <div className="space-y-3">
+              <a
+                href="mailto:info@nfxcharts.in?subject=NFXCharts%20Support%20Inquiry"
+                className="flex items-center gap-3 break-all rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm text-emerald-200 transition-colors hover:border-emerald-300/30"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="h-5 w-5 shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
                 >
-                  info@nfxcharts.in
-                </a>
-              </div>
-              <p className="text-xs text-gray-600 font-light leading-relaxed">
-                Reach out for support, inquiries, or membership assistance.
-              </p>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6.75h16v10.5H4z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m4.75 7.5 7.25 5.25 7.25-5.25"
+                  />
+                </svg>
+                <span>info@nfxcharts.in</span>
+              </a>
+              <a
+                href="https://www.instagram.com/nfxcharts"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm text-emerald-200 transition-colors hover:border-emerald-300/30"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="h-5 w-5 shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                >
+                  <rect x="5" y="5" width="14" height="14" rx="4" />
+                  <circle cx="12" cy="12" r="3.25" />
+                  <circle cx="16.5" cy="7.5" r="0.75" fill="currentColor" stroke="none" />
+                </svg>
+                <span>@nfxcharts</span>
+              </a>
+              <a
+                href="https://www.youtube.com/@NFXCharts"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm text-emerald-200 transition-colors hover:border-emerald-300/30"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="h-5 w-5 shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                >
+                  <rect x="4" y="7" width="16" height="10" rx="3" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m10.75 10 4 2-4 2z"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+                <span>@NFXCharts</span>
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-gray-800 pt-8">
-          {/* Bottom Info */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-gray-600 font-light">
-              © 2026 NFXCharts. All rights reserved.
-            </p>
-            <p className="text-xs text-gray-500 font-light leading-relaxed text-center md:text-right">
-              Educational content only. Trading involves risk. Always trade with defined risk management.
-            </p>
-          </div>
+        <div className="mt-10 flex flex-col justify-between gap-4 border-t border-white/10 pt-8 text-xs text-gray-600 md:flex-row">
+          <p>Copyright 2026 NFXCharts. All rights reserved.</p>
+          <p className="max-w-xl md:text-right">
+            Educational content only. Trading involves risk. Always trade with defined risk management.
+          </p>
         </div>
       </div>
     </footer>

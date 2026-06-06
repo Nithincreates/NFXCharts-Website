@@ -5,138 +5,129 @@ export const metadata = {
   description: 'Refund policy for NFXCharts intraday futures education membership.',
 };
 
+const sections = [
+  {
+    title: '1. All Sales Are Final',
+    paragraphs: [
+      'Except where required by applicable law, purchases of the NFXCharts Membership are final and non-refundable.',
+      'We do not provide refunds, credits, or partial refunds for unused time, missed sessions, changes in personal circumstances, or cancellation during an active billing period.',
+      'We aim to describe the membership clearly before purchase so you can make an informed decision.',
+    ],
+  },
+  {
+    title: '2. Exceptional Circumstances',
+    paragraphs: [
+      'Although the general policy is no refunds, NFXCharts may review exceptional cases at its discretion.',
+      'Examples may include non-delivery of access after purchase or a major platform issue that prevents access to purchased educational content.',
+      'Approval of one refund request does not guarantee approval of future requests or create a general refund right.',
+    ],
+  },
+  {
+    title: '3. Refund Request Process',
+    paragraphs: [
+      'To request a review, email info@nfxcharts.in with the subject line "Refund Request".',
+      'Include your name, purchase date, payment reference if available, the reason for your request, and any screenshots or details that help us understand the issue.',
+      'Refund requests should be submitted as soon as possible after the issue occurs.',
+    ],
+  },
+  {
+    title: '4. Review Timeline',
+    paragraphs: [
+      'NFXCharts will review refund requests on a case-by-case basis.',
+      'We aim to respond within 7 to 10 business days after receiving enough information to evaluate the request.',
+      'Additional information may be requested before a final decision is made.',
+    ],
+  },
+  {
+    title: '5. Cancellation',
+    paragraphs: [
+      'You may cancel your membership at any time.',
+      'Cancellation stops future billing but does not automatically create a refund for the current billing period.',
+      'Access may continue until the end of the paid billing period unless otherwise stated.',
+    ],
+  },
+  {
+    title: '6. Changes to This Policy',
+    paragraphs: [
+      'NFXCharts may update this Refund Policy from time to time.',
+      'The updated version will be posted on this page with the latest revision date. Continued use of the service after changes are posted means you accept the updated policy.',
+    ],
+  },
+  {
+    title: '7. Contact',
+    paragraphs: [
+      'For refund questions, contact NFXCharts at info@nfxcharts.in.',
+    ],
+  },
+];
+
 export default function RefundPolicyPage() {
   return (
-    <main className="bg-zinc-950 min-h-screen py-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <Link href="/" className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-light mb-12 inline-block">
-          ← Back to Home
+    <main className="site-shell min-h-screen px-4 py-8 text-gray-300 sm:px-6 sm:py-10">
+      <div className="mx-auto max-w-4xl">
+        <Link
+          href="/"
+          className="mb-10 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-emerald-200 transition-colors hover:border-emerald-300/30"
+        >
+          Back to Home
         </Link>
 
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6 text-white">
-          Refund Policy
-        </h1>
-        <p className="text-gray-500 font-light mb-16 text-lg">
-          Last updated: March 2, 2026
-        </p>
+        <header className="mb-8 rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:mb-10 sm:p-6">
+          <p className="section-kicker mb-4">Policy</p>
+          <h1 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+            Refund Policy
+          </h1>
+          <p className="mt-5 text-sm text-gray-500 sm:text-base">
+            Last updated: March 2, 2026
+          </p>
+          <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-400 sm:text-base">
+            This policy explains how refunds, cancellations, and exceptional refund reviews work for the NFXCharts Intraday Membership.
+          </p>
+        </header>
 
-        {/* Content */}
-        <div className="space-y-16 text-gray-300 font-light leading-8">
-          {/* Introduction */}
-          <section className="pb-8">
-            <p className="text-base leading-8">
-              Welcome to the NFXCharts Refund Policy ("Policy"). We value and respect our customers and strive to provide the highest quality services. This policy outlines our stance on refunds for the NFXCharts Intraday Membership ("Membership").
-            </p>
-          </section>
-
-          {/* Section 1: No Refunds */}
-          <section className="pb-8">
-            <h2 className="text-3xl font-light tracking-tight mb-8 text-white">
-              No Refunds
-            </h2>
-            <div className="space-y-6">
-              <p className="text-base leading-8">
-                Except as required by law, all purchases of the Membership are final and non-refundable. Once you have paid for the Membership, we do not provide refunds or credits, including for partially used periods. We provide a clear description of the Membership on our website and through other communications, so you can make an informed decision before making a purchase.
-              </p>
-            </div>
-          </section>
-
-          {/* Section 2: Exceptional Circumstances */}
-          <section className="pb-8">
-            <h2 className="text-3xl font-light tracking-tight mb-8 text-white">
-              Exceptional Circumstances
-            </h2>
-            <div className="space-y-6">
-              <p className="text-base leading-8">
-                While all sales are final, we understand that exceptional circumstances can take place with regard to the character of the Membership we provide. Therefore, we do honour requests for refund for the following reasons:
-              </p>
-              
-              <div className="space-y-6 pl-6 border-l-2 border-blue-400/30">
-                <p className="text-base leading-8">
-                  <strong className="text-gray-200">1. Non-delivery of Content:</strong> Due to some mailing issues with your email provider or your own mail server, you might not receive delivery emails or access credentials from us.
-                </p>
-                <p className="text-base leading-8">
-                  <strong className="text-gray-200">2. Major Defects:</strong> Although all the Membership content is thoroughly tested before release, unexpected errors or platform unavailability may occur that prevent access to the educational materials.
-                </p>
+        <div className="space-y-4">
+          {sections.map((section) => (
+            <section key={section.title} className="rounded-2xl border border-white/10 bg-zinc-950/60 p-5 sm:p-6">
+              <h2 className="mb-4 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                {section.title}
+              </h2>
+              <div className="space-y-3">
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="text-sm leading-7 text-gray-400 sm:text-base">
+                    {section.title === '7. Contact' ? (
+                      <>
+                        For refund questions, contact NFXCharts at{' '}
+                        <a
+                          href="mailto:info@nfxcharts.in?subject=NFXCharts%20Refund%20Policy%20Question"
+                          className="font-semibold text-emerald-200 transition-colors hover:text-emerald-100"
+                        >
+                          info@nfxcharts.in
+                        </a>
+                        .
+                      </>
+                    ) : section.title === '3. Refund Request Process' && paragraph.includes('info@nfxcharts.in') ? (
+                      <>
+                        To request a review, email{' '}
+                        <a
+                          href="mailto:info@nfxcharts.in?subject=Refund%20Request"
+                          className="font-semibold text-emerald-200 transition-colors hover:text-emerald-100"
+                        >
+                          info@nfxcharts.in
+                        </a>{' '}
+                        with the subject line "Refund Request".
+                      </>
+                    ) : (
+                      paragraph
+                    )}
+                  </p>
+                ))}
               </div>
-            </div>
-          </section>
+            </section>
+          ))}
+        </div>
 
-          {/* Section 3: Refund Request Process */}
-          <section className="pb-8">
-            <h2 className="text-3xl font-light tracking-tight mb-8 text-white">
-              How to Request a Refund
-            </h2>
-            <div className="space-y-6">
-              <p className="text-base leading-8">
-                If you wish to inquire about a refund under exceptional circumstances, you should contact us at{' '}
-                <a href="mailto:info@nfxcharts.in" className="text-blue-400 hover:text-blue-300 transition-colors">
-                  info@nfxcharts.in
-                </a>{' '}
-                with the subject line "Refund Request" and include detailed reasons for your request in the body of the email.
-              </p>
-              <p className="text-base leading-8">
-                Please provide as much detail as possible, including:
-              </p>
-              <ul className="space-y-3 pl-6">
-                <li className="text-base leading-8">Your membership purchase date</li>
-                <li className="text-base leading-8">The exact nature of the issue or exceptional circumstance</li>
-                <li className="text-base leading-8">Steps you have taken to resolve the issue</li>
-                <li className="text-base leading-8">Any relevant screenshots or documentation</li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Section 4: Discretion */}
-          <section className="pb-8">
-            <h2 className="text-3xl font-light tracking-tight mb-8 text-white">
-              Our Discretion
-            </h2>
-            <div className="space-y-6">
-              <p className="text-base leading-8">
-                Please note that we are under no obligation to grant a refund request unless required by applicable local law, and we reserve the right to determine in our sole discretion whether the circumstances warrant a refund. We will review all refund requests on a case-by-case basis and respond within 7-10 business days with a decision.
-              </p>
-            </div>
-          </section>
-
-          {/* Section 5: Changes to Policy */}
-          <section className="pb-8">
-            <h2 className="text-3xl font-light tracking-tight mb-8 text-white">
-              Changes to This Policy
-            </h2>
-            <div className="space-y-6">
-              <p className="text-base leading-8">
-                We reserve the right to revise this Refund Policy at any time. The updated policy will be available on our website. Your access to the Membership after a revised Refund Policy signifies your acceptance of the updated policy.
-              </p>
-            </div>
-          </section>
-
-          {/* Section 6: Contact */}
-          <section className="pb-8">
-            <h2 className="text-3xl font-light tracking-tight mb-8 text-white">
-              Contact Us
-            </h2>
-            <div className="space-y-6">
-              <p className="text-base leading-8">
-                If you have any questions about this Refund Policy, please contact us at:{' '}
-              </p>
-              <p className="text-base leading-8 text-blue-400">
-                <a href="mailto:info@nfxcharts.in" className="hover:text-blue-300 transition-colors">
-                  info@nfxcharts.in
-                </a>
-              </p>
-            </div>
-          </section>
-
-          {/* Final Disclaimer */}
-          <div className="mt-16 pt-12 border-t border-gray-800">
-            <div className="space-y-6">
-              <p className="text-base text-gray-400 leading-8">
-                By purchasing the NFXCharts Membership, you acknowledge that you have read and understood this Refund Policy and agree to be bound by its terms. This policy is provided for your convenience and protection.
-              </p>
-            </div>
-          </div>
+        <div className="mt-6 rounded-2xl border border-amber-300/20 bg-amber-300/10 p-5 text-sm leading-7 text-amber-100">
+          This policy is provided for clarity around NFXCharts membership purchases. It should not be treated as legal advice.
         </div>
       </div>
     </main>

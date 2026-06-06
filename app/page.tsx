@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 export default function Home() {
   return (
     <>
-      <main className="bg-zinc-950">
+      <main className="site-shell">
         <Hero />
         <Framework />
         <Instruments />

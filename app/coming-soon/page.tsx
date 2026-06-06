@@ -12,7 +12,7 @@ export default function ComingSoon() {
         </h1>
         <p className="text-lg text-gray-400 mb-8">
           We're currently working on integrating our payment gateway. Please check back soon or contact us at{' '}
-          <a href="mailto:info@nfxcharts.in" className="text-blue-400 hover:text-blue-300">
+          <a href="mailto:info@nfxcharts.in?subject=NFXCharts%20Membership%20Inquiry" className="text-blue-400 hover:text-blue-300">
             info@nfxcharts.in
           </a>
           .
